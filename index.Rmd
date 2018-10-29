@@ -1,19 +1,13 @@
 ---
-title: "Holy cow!"
+title: "Keunhyung Yu Website"
 ---
 
-### I have a webpage!
+### Welcome to my website!
 
-And I can put all kinds of stuff on it!
+This website was created specifically for HW4 in Data Science I course at *Mailman School of Public Health*.
 
-I can add additional text.
+### Some links
 
-I *could* write some code but I'm not going to.
+You can find more information about the course I'm enrolled in [here](https://p8105.com)
 
-### Add some links
-
-I like [google](https://www.google.com)
-
-I can link directly to my [about page](about.html)
-
-<img src="images/hhkbp2_basic_layout1500.png" style="width:75%">
+More to come!
