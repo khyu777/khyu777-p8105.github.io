@@ -1,11 +1,17 @@
 ---
-title: "About"
+title: "About me"
 ---
 
-### About this site
+Aspiring data scientist
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+### Academics
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+Columbia University Mailman School of Public Health | Class of 2019 
 
-add
+* Relevant course(s): Data Science I
+
+Cornell University | Class of 2015
+
+### Professional Experience
+
+Intern at Habitat for Humanity Korea | Oct 2017 - May 2018
