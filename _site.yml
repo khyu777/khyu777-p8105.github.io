@@ -1,13 +1,15 @@
-name: "Yay internet!"
+name: "p8105_website"
 output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
+    - text: "About me"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<ky2288@columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/khyu777-8105/
+    - text: "LinkedIn"
+      href: https://www.linkedin.com/in/keunhyung-yu-bba494103
 output:
   html_document
