@@ -50,8 +50,7 @@ critical_count =
   mutate(critical_flag = recode(critical_flag, 'Not Applicable' = 'NA')) %>% 
   ggplot(aes(critical_flag)) +
   geom_bar() +
-  facet_wrap(~boro) +
-  labs(title = 'Critical Flag Count by Borough')
+  facet_wrap(~boro)
 
 ggplotly(critical_count)
 ```
