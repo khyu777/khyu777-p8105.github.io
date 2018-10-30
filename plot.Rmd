@@ -23,8 +23,8 @@ rest_inspec =
   rest_inspec %>% 
   janitor::clean_names() %>% 
   select(boro, critical_flag, cuisine_description, inspection_date, score, violation_code, zipcode) %>% 
-  filter(boro != 'Missing') %>% 
-  separate(inspection_date, into = c("year", "month", "day"), sep = "-")
+  separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>% 
+  filter(boro != 'Missing', year %in% c('2015', '2016', '2017')) 
 ```
 
 Column {data-width=650}
@@ -45,7 +45,7 @@ ggplotly(critical_count)
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Distribution of Inspection Scores by Month (2015-2017)
+### Distribution of Inspection Scores by Month
 
 ```{r plot_2}
 #plot distribution of inspection score (2015-2017)
@@ -54,10 +54,10 @@ rest_inspec %>%
   plot_ly(x = ~month, y = ~score, type = "box")
 ```
 
-### Mean Inspecton Score by Borough (2013-2017)
+### Mean Inspecton Score by Borough
 
 ```{r plot_3}
-#plot mean inspection score by borough excluding 2011-2012
+#plot mean inspection score by borough
 rest_inspec %>% 
   filter(!year %in% c("2011", "2012")) %>% 
   group_by(boro, year) %>% 
