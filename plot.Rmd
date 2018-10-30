@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -29,7 +29,7 @@ rest_inspec =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Critical Flag Count by Borough
 
 ```{r plot_1}
 #critical_flag count by borough plot
@@ -44,7 +44,7 @@ ggplotly(critical_count)
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of Inspection Scores by Month (2015-2017)
 
 ```{r plot_2}
 #plot distribution of inspection score (2015-2017)
@@ -53,9 +53,10 @@ rest_inspec %>%
   plot_ly(x = ~month, y = ~score, type = "box")
 ```
 
-### Chart C
+### Mean Inspecton Score by Borough (2013-2017)
 
 ```{r plot_3}
+#plot mean inspection score by borough excluding 2011-2012
 rest_inspec %>% 
   filter(!year %in% c("2011", "2012")) %>% 
   group_by(boro, year) %>% 
