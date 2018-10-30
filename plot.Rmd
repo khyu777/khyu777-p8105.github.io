@@ -55,10 +55,11 @@ rest_inspec %>%
 
 ### Chart C
 
-```{r}
-
+```{r plot_3}
+rest_inspec %>% 
+  filter(!year %in% c("2011", "2012")) %>% 
+  group_by(boro, year) %>% 
+  summarize(mean = mean(score, na.rm = TRUE)) %>% 
+  filter(!is.na(mean)) %>%
+  plot_ly(x = ~year, y = ~mean, color = ~boro, type = "scatter", mode = "lines")
 ```
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
