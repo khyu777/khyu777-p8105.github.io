@@ -47,7 +47,10 @@ Column {data-width=350}
 ### Chart B
 
 ```{r plot_2}
-
+#plot distribution of inspection score (2015-2017)
+rest_inspec %>% 
+  filter(year %in% c("2015", "2016", "2017")) %>%
+  plot_ly(x = ~month, y = ~score, type = "box")
 ```
 
 ### Chart C
