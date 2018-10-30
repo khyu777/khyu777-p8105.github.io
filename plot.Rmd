@@ -14,6 +14,10 @@ library(p8105.datasets)
 
 ```{r plot}
 data(rest_inspec)
+rest_inspec = 
+  rest_inspec %>% 
+  janitor::clean_names() %>% 
+  select(boro, critical_flag, cuisine_description, inspection_date, score, violation_code, zipcode)
 ```
 
 
