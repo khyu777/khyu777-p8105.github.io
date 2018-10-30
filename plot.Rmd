@@ -25,7 +25,12 @@ rest_inspec =
   filter(boro != 'Missing')
 ```
 
-```{r}
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r plot_1}
 #critical_flag count by borough plot
 critical_count = ggplot(rest_inspec, aes(critical_flag)) +
   geom_bar() +
@@ -33,16 +38,6 @@ critical_count = ggplot(rest_inspec, aes(critical_flag)) +
   labs(title = 'Critical Flag Count by Borough')
 
 ggplotly(critical_count)
-```
-
-
-Column {data-width=650}
------------------------------------------------------------------------
-
-### Chart A
-
-```{r}
-
 ```
 
 Column {data-width=350}
