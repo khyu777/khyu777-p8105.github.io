@@ -2,6 +2,9 @@ name: "p8105_website"
 output_dir: "."
 navbar:
   title: "Home"
+  left:
+    - text: "flexdashboard"
+      href: plot.html
   right:
     - text: "About me"
       href: about.html
