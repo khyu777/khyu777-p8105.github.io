@@ -45,7 +45,10 @@ Column {data-width=350}
 
 ```{r plot_2}
 #critical_flag count by borough plot
-critical_count = ggplot(rest_inspec, aes(critical_flag)) +
+critical_count = 
+  rest_inspec %>% 
+  mutate(critical_flag = recode(critical_flag, 'Not Applicable' = 'NA')) %>% 
+  ggplot(aes(critical_flag)) +
   geom_bar() +
   facet_wrap(~boro) +
   labs(title = 'Critical Flag Count by Borough')
