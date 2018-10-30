@@ -10,14 +10,29 @@ output:
 library(tidyverse)
 library(flexdashboard)
 library(p8105.datasets)
+library(plotly)
 ```
 
-```{r plot}
+```{r clean_data}
+#read data
 data(rest_inspec)
+
+#clean and select columns
 rest_inspec = 
   rest_inspec %>% 
   janitor::clean_names() %>% 
-  select(boro, critical_flag, cuisine_description, inspection_date, score, violation_code, zipcode)
+  select(boro, critical_flag, cuisine_description, inspection_date, score, violation_code, zipcode) %>% 
+  filter(boro != 'Missing')
+```
+
+```{r}
+#critical_flag count by borough plot
+critical_count = ggplot(rest_inspec, aes(critical_flag)) +
+  geom_bar() +
+  facet_wrap(~boro) +
+  labs(title = 'Critical Flag Count by Borough')
+
+ggplotly(critical_count)
 ```
 
 
