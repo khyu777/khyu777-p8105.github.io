@@ -22,7 +22,8 @@ rest_inspec =
   rest_inspec %>% 
   janitor::clean_names() %>% 
   select(boro, critical_flag, cuisine_description, inspection_date, score, violation_code, zipcode) %>% 
-  filter(boro != 'Missing')
+  filter(boro != 'Missing') %>% 
+  separate(inspection_date, into = c("year", "month", "day"), sep = "-")
 ```
 
 Column {data-width=650}
@@ -45,7 +46,7 @@ Column {data-width=350}
 
 ### Chart B
 
-```{r}
+```{r plot_2}
 
 ```
 
