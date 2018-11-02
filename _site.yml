@@ -11,7 +11,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:<ky2288@columbia.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/khyu777-8105/
+      href: http://github.com/khyu777/
     - text: "LinkedIn"
       href: https://www.linkedin.com/in/keunhyung-yu-bba494103
 output:
